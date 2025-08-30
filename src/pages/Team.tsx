@@ -164,7 +164,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Marek Tvrdoň</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Útočník • #88</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #71</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>
@@ -199,6 +199,74 @@ const Team = () => {
                 <div className="text-primary font-semibold mb-2">
               </div>
                 <div className="text-foreground/60 text-sm mb-3">Obranca • #11</div>
+                <div className="space-y-1 text-sm text-foreground/80">
+                  <div>
+                </div>
+                  <div>
+                </div>
+                </div>
+              </div>
+            </Card>  
+<Card className="p-6 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card hover:shadow-glow transition-all duration-300 group">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-foreground">AG</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Andrej Gubáň</h3>
+                <div className="text-primary font-semibold mb-2">
+              </div>
+                <div className="text-foreground/60 text-sm mb-3">Obranca • #87</div>
+                <div className="space-y-1 text-sm text-foreground/80">
+                  <div>
+                </div>
+                  <div>
+                </div>
+                </div>
+              </div>
+            </Card>  
+<Card className="p-6 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card hover:shadow-glow transition-all duration-300 group">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-foreground">MG</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Martin Gubáň</h3>
+                <div className="text-primary font-semibold mb-2">
+              </div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #20</div>
+                <div className="space-y-1 text-sm text-foreground/80">
+                  <div>
+                </div>
+                  <div>
+                </div>
+                </div>
+              </div>
+            </Card>  
+<Card className="p-6 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card hover:shadow-glow transition-all duration-300 group">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-foreground">MP</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Matej Parák</h3>
+                <div className="text-primary font-semibold mb-2">
+              </div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #88</div>
+                <div className="space-y-1 text-sm text-foreground/80">
+                  <div>
+                </div>
+                  <div>
+                </div>
+                </div>
+              </div>
+            </Card>  
+<Card className="p-6 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card hover:shadow-glow transition-all duration-300 group">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-foreground">VM</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Vladimír Malik</h3>
+                <div className="text-primary font-semibold mb-2">
+              </div>
+                <div className="text-foreground/60 text-sm mb-3">Obranca • #7</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>

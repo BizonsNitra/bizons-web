@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
@@ -22,6 +25,7 @@ const Index = () => {
       {/* Navigation */}
       <nav className="relative z-10 p-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
               <img
@@ -34,6 +38,8 @@ const Index = () => {
               BIZONS NITRA
             </span>
           </div>
+
+          {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               to="/team"
@@ -48,7 +54,37 @@ const Index = () => {
               Zápasy
             </Link>
           </div>
+
+          {/* Mobile hamburger */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-foreground/80 hover:text-primary focus:outline-none"
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className="md:hidden mt-4 bg-background/90 backdrop-blur-md rounded-lg shadow-lg p-4 space-y-3">
+            <Link
+              to="/team"
+              onClick={() => setMenuOpen(false)}
+              className="block text-foreground/80 hover:text-primary transition-colors"
+            >
+              Tím
+            </Link>
+            <Link
+              to="/matches"
+              onClick={() => setMenuOpen(false)}
+              className="block text-foreground/80 hover:text-primary transition-colors"
+            >
+              Zápasy
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -204,20 +240,20 @@ const Index = () => {
               </p>
             </div>
 
-           <div>
-  <h3 className="font-semibold mb-4">Sledujte nás</h3>
-  <div className="flex gap-4">
-    <a
-      href="https://www.facebook.com/profile.php?id=61579981344970" 
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button variant="ghost" size="sm">
-        Facebook
-      </Button>
-    </a>
-  </div>
-</div>
+            <div>
+              <h3 className="font-semibold mb-4">Sledujte nás</h3>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61579981344970"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="sm">
+                    Facebook
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="border-t border-primary/20 mt-8 pt-8 text-center text-foreground/60">

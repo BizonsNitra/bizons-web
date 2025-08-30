@@ -113,7 +113,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Patrik Trenčanský</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Obranca • #17</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #17</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>
@@ -147,7 +147,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Timotej Zemko</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Obranca • #9</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #9</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>
@@ -215,7 +215,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Andrej Gubáň</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Obranca • #87</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #87</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>
@@ -232,7 +232,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Martin Gubáň</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Útočník • #20</div>
+                <div className="text-foreground/60 text-sm mb-3">Obranca • #20</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>
@@ -266,7 +266,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Vladimír Malik</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Obranca • #7</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #7</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>

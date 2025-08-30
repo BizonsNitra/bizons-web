@@ -1,12 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Index = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -25,7 +25,6 @@ const Index = () => {
       {/* Navigation */}
       <nav className="relative z-10 p-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
               <img
@@ -39,7 +38,7 @@ const Index = () => {
             </span>
           </div>
 
-          {/* Desktop menu */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               to="/team"
@@ -53,35 +52,49 @@ const Index = () => {
             >
               Zápasy
             </Link>
+            <Link
+              to="/about"
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
+              O nás
+            </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile Hamburger */}
           <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-foreground/80 hover:text-primary focus:outline-none"
-            >
-              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-foreground" />
+              ) : (
+                <Menu className="w-6 h-6 text-foreground" />
+              )}
             </button>
           </div>
         </div>
 
-        {/* Mobile dropdown */}
-        {menuOpen && (
-          <div className="md:hidden mt-4 bg-background/90 backdrop-blur-md rounded-lg shadow-lg p-4 space-y-3">
+        {/* Mobile Menu Dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 flex flex-col gap-4 bg-background/90 rounded-lg p-4 shadow-lg">
             <Link
               to="/team"
-              onClick={() => setMenuOpen(false)}
-              className="block text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Tím
             </Link>
             <Link
               to="/matches"
-              onClick={() => setMenuOpen(false)}
-              className="block text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Zápasy
+            </Link>
+            <Link
+              to="/about"
+              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              O nás
             </Link>
           </div>
         )}

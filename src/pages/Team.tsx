@@ -130,7 +130,7 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-foreground mb-1">Ruben Deckers</h3>
                 <div className="text-primary font-semibold mb-2">
               </div>
-                <div className="text-foreground/60 text-sm mb-3">Útočník • #87</div>
+                <div className="text-foreground/60 text-sm mb-3">Útočník • #14</div>
                 <div className="space-y-1 text-sm text-foreground/80">
                   <div>
                 </div>

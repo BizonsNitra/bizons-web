@@ -7,19 +7,9 @@ import { Link } from "react-router-dom";
 
 const Matches = () => {
   const upcomingMatches = [
+   
     {
       id: 1,
-      opponent: "DEMONS",
-      homeLogo: "/logos/bizons_logo.jpeg",
-      opponentLogo: "/logos/demons_logo.jpeg",
-      date: "7. september 2025",
-      time: "14:00",
-      venue: "Ihrisko pod Zoborom",
-      isHome: true,
-      status: "upcoming"
-    },
-    {
-      id: 2,
       opponent: "HORNETS ŠAĽA",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/hornets_logo.jpeg",
@@ -30,7 +20,7 @@ const Matches = () => {
       status: "upcoming"
     },
     {
-      id: 3,
+      id: 2,
       opponent: "SPARTA",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/sparta_logo.jpeg",
@@ -41,12 +31,24 @@ const Matches = () => {
       status: "upcoming"
     },
     {
-      id: 4,
+      id: 3,
       opponent: "GLADIATORS B",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/glad_logo.jpeg",
       date: "28. september 2025",
       time: "16:00",
+      venue: "Ihrisko pod Zoborom",
+      isHome: true,
+      status: "upcoming"
+    },
+
+    {
+      id: 4,
+      opponent: "WILD BULLS",
+      homeLogo: "/logos/bizons_logo.jpeg",
+      opponentLogo: "/logos/wild_logo.jpeg",
+      date: "5. október 2025",
+      time: "14:00",
       venue: "Ihrisko pod Zoborom",
       isHome: true,
       status: "upcoming"
@@ -56,52 +58,17 @@ const Matches = () => {
   const pastMatches = [
     {
       id: 1,
-      opponent: "WILD BULLS",
-      homeLogo: "/placeholder.svg",
-      opponentLogo: "/placeholder.svg",
-      date: "28. november 2024",
-      venue: "Nitra Arena",
+      opponent: "DEMONS",
+      homeLogo: "/logos/bizons_logo.jpeg",
+      opponentLogo: "/logos/demons_logo.jpeg",
+      date: "7. september 2025",
+      venue: "Ihrisko pod Zoborom",
       isHome: true,
-      homeScore: 4,
+      homeScore: 3,
       awayScore: 2,
       result: "win"
     },
-    {
-      id: 2,
-      opponent: "HK DUKLA",
-      homeLogo: "/placeholder.svg",
-      opponentLogo: "/placeholder.svg",
-      date: "25. november 2024",
-      venue: "Dukla Arena",
-      isHome: false,
-      homeScore: 1,
-      awayScore: 3,
-      result: "loss"
-    },
-    {
-      id: 3,
-      opponent: "HC ZVOLEN",
-      homeLogo: "/placeholder.svg",
-      opponentLogo: "/placeholder.svg",
-      date: "22. november 2024",
-      venue: "Nitra Arena",
-      isHome: true,
-      homeScore: 5,
-      awayScore: 1,
-      result: "win"
-    },
-    {
-      id: 4,
-      opponent: "HC MICHALOVCE",
-      homeLogo: "/placeholder.svg",
-      opponentLogo: "/placeholder.svg",
-      date: "18. november 2024",
-      venue: "Michalovce Arena",
-      isHome: false,
-      homeScore: 2,
-      awayScore: 2,
-      result: "draw"
-    }
+
   ];
 
   return (
@@ -147,6 +114,7 @@ const Matches = () => {
               <TabsTrigger value="results">Výsledky</TabsTrigger>
             </TabsList>
 
+            {/* Upcoming Matches */}
             <TabsContent value="upcoming" className="space-y-6">
               {upcomingMatches.map(match => (
                 <Card
@@ -201,7 +169,80 @@ const Matches = () => {
               ))}
             </TabsContent>
 
-            <TabsContent value="results"></TabsContent>
+            {/* Past Results */}
+            <TabsContent value="results" className="space-y-6">
+              {pastMatches.map(match => (
+                <Card
+                  key={match.id}
+                  className="p-6 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card hover:shadow-glow transition-all duration-300"
+                >
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-12 text-center">
+                    {/* Domáci tím */}
+                    <div>
+                      <div className="text-xl font-bold text-foreground mb-2">BIZONS NITRA</div>
+                      <div className="w-20 h-20 bg-gradient-hero rounded-full mx-auto flex items-center justify-center">
+                        <img
+                          src={match.homeLogo || "/logos/bizons_logo.jpeg"}
+                          alt="domáci tím logo"
+                          className="w-20 h-20 rounded-full object-cover"
+                        />
+                      </div>
+                      {match.isHome && <Badge variant="secondary" className="mt-2">Domáci</Badge>}
+                    </div>
+
+                    {/* Skóre + výsledok */}
+                    <div>
+                      <div className="text-3xl font-bold text-primary mb-2">
+                        {match.isHome
+                          ? `${match.homeScore} : ${match.awayScore}`
+                          : `${match.awayScore} : ${match.homeScore}`}
+                      </div>
+                      <div
+                        className={`text-lg font-semibold ${
+                          match.result === "win"
+                            ? "text-green-500"
+                            : match.result === "loss"
+                            ? "text-red-500"
+                            : "text-yellow-500"
+                        }`}
+                      >
+                        {match.result === "win" && "Výhra"}
+                        {match.result === "loss" && "Prehra"}
+                        {match.result === "draw" && "Remíza"}
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-foreground/80 mt-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{match.date}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-foreground/80 mt-1">
+                        <MapPin className="w-4 h-4" />
+                        <span>{match.venue}</span>
+                      </div>
+
+                      {/* Detail zápasu */}
+                      <div className="mt-4">
+                        <Link to={`/matches/${match.id}`}>
+                          <Button variant="outline">Detail zápasu</Button>
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Hosťujúci tím */}
+                    <div>
+                      <div className="text-xl font-bold text-foreground mb-2">{match.opponent}</div>
+                      <div className="w-20 h-20 bg-secondary rounded-full mx-auto flex items-center justify-center">
+                        <img
+                          src={match.opponentLogo || "/placeholder.svg"}
+                          alt="hosťujúci tím logo"
+                          className="w-20 h-20 rounded-full object-cover"
+                        />
+                      </div>
+                      {!match.isHome && <Badge variant="secondary" className="mt-2">Hosťujúci</Badge>}
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </TabsContent>
           </Tabs>
         </div>
       </section>

@@ -49,8 +49,8 @@ const MatchesDetail = () => {
       opponentLogo: "/logos/demons_logo.jpeg",
       date: "7. september 2025",
       venue: "Ihrisko pod Zoborom",
-      homeScore: 2,
-      awayScore: 1,
+      homeScore: 3,
+      awayScore: 2,
       events: {
         1: [
           { time: "07:57", type: "penalty", player: "Trenčanský P.", reason: "Podrazenie" },

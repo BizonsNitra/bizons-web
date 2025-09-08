@@ -132,14 +132,14 @@ const Index = () => {
 
             <Card className="p-8 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">0</div>
+                <div className="text-4xl font-bold text-primary mb-2">1</div>
                 <div className="text-foreground/80">Výhry</div>
               </div>
             </Card>
 
             <Card className="p-8 bg-gradient-card backdrop-blur-md border-primary/30 shadow-card">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">0:0</div>
+                <div className="text-4xl font-bold text-primary mb-2">3:2</div>
                 <div className="text-foreground/80">Skóre</div>
               </div>
             </Card>
@@ -208,21 +208,21 @@ const Index = () => {
                 <div className="text-3xl font-bold text-primary mb-2">VS</div>
                 <div className="flex items-center justify-center gap-2 text-foreground/80">
                   <Calendar className="w-4 h-4" />
-                  <span>7. september 2025</span>
+                  <span>14. september 2025</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-foreground/80 mt-1">
                   <MapPin className="w-4 h-4" />
-                  <span>14:00 | Ihrisko pod Zoborom</span>
+                  <span>13:00 | Ihrisko pod Zoborom</span>
                 </div>
               </div>
 
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground mb-2">
-                  DEMONS
+                  HORNETS ŠAĽA
                 </div>
                 <div className="w-16 h-16 bg-secondary rounded-full mx-auto flex items-center justify-center">
                   <img
-                    src={"/logos/demons_logo.jpeg"}
+                    src={"/logos/hornets_logo.jpeg"}
                     alt="logo"
                     className="w-16 h-16 rounded-full object-cover"
                   />

@@ -92,7 +92,6 @@ const MatchesDetail = () => {
           forwards: [
             { number: 17, name: "Trenčanský", photo: "/players/player.png" },
             { number: 10, name: "Forman", photo: "/players/forman.png" },
-            ,
           ],
         },
       },

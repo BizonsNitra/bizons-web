@@ -79,7 +79,7 @@ const Matches = () => {
       isHome: true,
       homeScore: 2,
       awayScore: 5,
-      result: "lose"
+      result: "lost"
     },
 
   ];

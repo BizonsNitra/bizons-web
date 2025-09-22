@@ -13,25 +13,14 @@ const Matches = () => {
       opponent: "HORNETS ŠAĽA",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/hornets_logo.jpeg",
-      date: "14. september 2025",
-      time: "13:00",
+      date: "ODLOŽENÉ",
+      time: "",
       venue: "Ihrisko pod Zoborom",
       isHome: false,
       status: "upcoming"
     },
     {
       id: 2,
-      opponent: "SPARTA",
-      homeLogo: "/logos/bizons_logo.jpeg",
-      opponentLogo: "/logos/sparta_logo.jpeg",
-      date: "15. september 2025",
-      time: "15:00",
-      venue: "Ihrisko pod Zoborom",
-      isHome: true,
-      status: "upcoming"
-    },
-    {
-      id: 3,
       opponent: "GLADIATORS B",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/glad_logo.jpeg",
@@ -41,14 +30,26 @@ const Matches = () => {
       isHome: true,
       status: "upcoming"
     },
-
+    
     {
-      id: 4,
+      id: 3,
       opponent: "WILD BULLS",
       homeLogo: "/logos/bizons_logo.jpeg",
       opponentLogo: "/logos/wild_logo.jpeg",
       date: "5. október 2025",
       time: "14:00",
+      venue: "Ihrisko pod Zoborom",
+      isHome: true,
+      status: "upcoming"
+    },
+    
+    {
+      id: 4,
+      opponent: "STAVBÁR PATRIOTS",
+      homeLogo: "/logos/bizons_logo.jpeg",
+      opponentLogo: "/logos/stav_logo.jpeg",
+      date: "12. október 2025",
+      time: "13:00",
       venue: "Ihrisko pod Zoborom",
       isHome: true,
       status: "upcoming"
@@ -67,6 +68,18 @@ const Matches = () => {
       homeScore: 3,
       awayScore: 2,
       result: "win"
+    },
+  {
+        id: 2,
+      opponent: "SPARTA",
+      homeLogo: "/logos/bizons_logo.jpeg",
+      opponentLogo: "/logos/sparta_logo.jpeg",
+      date: "15. september 2025",
+      venue: "Ihrisko pod Zoborom",
+      isHome: true,
+      homeScore: 2,
+      awayScore: 5,
+      result: "lose"
     },
 
   ];

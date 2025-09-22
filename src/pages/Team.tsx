@@ -27,7 +27,6 @@ const players = [
   { name: "Adam Bibeň", number: 11, position: "Obranca", initials: "AB", photo: null },
   { name: "Andrej Gubáň", number: 87, position: "Útočník", initials: "AG", photo: null },
   { name: "Martin Gubáň", number: 20, position: "Obranca", initials: "MG", photo: null },
-  { name: "Matej Parák", number: 88, position: "Útočník", initials: "MP", photo: null },
   { name: "Vladimír Malik", number: 7, position: "Útočník", initials: "VM", photo: null },
 ];
 
